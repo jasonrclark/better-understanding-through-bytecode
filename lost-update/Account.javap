@@ -1,0 +1,98 @@
+Classfile /Users/jclark/source/better-understanding-through-bytecode/lost-update/Account.class
+  Last modified Jul 4, 2022; size 434 bytes
+  MD5 checksum bd3580457bfe2b2a6fdb1ded45a56fd9
+  Compiled from "Account.java"
+class Account
+  minor version: 0
+  major version: 55
+  flags: (0x0020) ACC_SUPER
+  this_class: #3                          // Account
+  super_class: #4                         // java/lang/Object
+  interfaces: 0, fields: 1, methods: 3, attributes: 1
+Constant pool:
+   #1 = Methodref          #4.#18         // java/lang/Object."<init>":()V
+   #2 = Fieldref           #3.#19         // Account.balance:J
+   #3 = Class              #20            // Account
+   #4 = Class              #21            // java/lang/Object
+   #5 = Utf8               balance
+   #6 = Utf8               J
+   #7 = Utf8               <init>
+   #8 = Utf8               (J)V
+   #9 = Utf8               Code
+  #10 = Utf8               LineNumberTable
+  #11 = Utf8               getBalance
+  #12 = Utf8               ()J
+  #13 = Utf8               transfer
+  #14 = Utf8               (JLAccount;)V
+  #15 = Utf8               StackMapTable
+  #16 = Utf8               SourceFile
+  #17 = Utf8               Account.java
+  #18 = NameAndType        #7:#22         // "<init>":()V
+  #19 = NameAndType        #5:#6          // balance:J
+  #20 = Utf8               Account
+  #21 = Utf8               java/lang/Object
+  #22 = Utf8               ()V
+{
+  private long balance;
+    descriptor: J
+    flags: (0x0002) ACC_PRIVATE
+
+  public Account(long);
+    descriptor: (J)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=3, locals=3, args_size=2
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: aload_0
+         5: lload_1
+         6: putfield      #2                  // Field balance:J
+         9: return
+      LineNumberTable:
+        line 4: 0
+        line 5: 4
+        line 6: 9
+
+  public long getBalance();
+    descriptor: ()J
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: aload_0
+         1: getfield      #2                  // Field balance:J
+         4: lreturn
+      LineNumberTable:
+        line 9: 0
+
+  public void transfer(long, Account);
+    descriptor: (JLAccount;)V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=5, locals=4, args_size=3
+         0: aload_0
+         1: getfield      #2                  // Field balance:J
+         4: lload_1
+         5: lcmp
+         6: iflt          29
+         9: aload_0
+        10: dup
+        11: getfield      #2                  // Field balance:J
+        14: lload_1
+        15: lsub
+        16: putfield      #2                  // Field balance:J
+        19: aload_3
+        20: dup
+        21: getfield      #2                  // Field balance:J
+        24: lload_1
+        25: ladd
+        26: putfield      #2                  // Field balance:J
+        29: return
+      LineNumberTable:
+        line 14: 0
+        line 15: 9
+        line 16: 19
+        line 18: 29
+      StackMapTable: number_of_entries = 1
+        frame_type = 29 /* same */
+}
+SourceFile: "Account.java"

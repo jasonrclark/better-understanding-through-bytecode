@@ -1,0 +1,2 @@
+javac *.java
+javap -p -c -v Account.class > Account.javap

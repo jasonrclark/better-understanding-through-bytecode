@@ -1,0 +1,69 @@
+Classfile /Users/jclark/source/better-understanding-through-bytecode/tail-call/Overflowing.class
+  Last modified Jul 4, 2022; size 347 bytes
+  MD5 checksum e27e1d306f1ea3220bb704586048e89b
+  Compiled from "Overflowing.java"
+public class Overflowing
+  minor version: 0
+  major version: 55
+  flags: (0x0021) ACC_PUBLIC, ACC_SUPER
+  this_class: #3                          // Overflowing
+  super_class: #4                         // java/lang/Object
+  interfaces: 0, fields: 0, methods: 3, attributes: 1
+Constant pool:
+   #1 = Methodref          #4.#15         // java/lang/Object."<init>":()V
+   #2 = Methodref          #3.#16         // Overflowing.run:(I)V
+   #3 = Class              #17            // Overflowing
+   #4 = Class              #18            // java/lang/Object
+   #5 = Utf8               <init>
+   #6 = Utf8               ()V
+   #7 = Utf8               Code
+   #8 = Utf8               LineNumberTable
+   #9 = Utf8               run
+  #10 = Utf8               (I)V
+  #11 = Utf8               main
+  #12 = Utf8               ([Ljava/lang/String;)V
+  #13 = Utf8               SourceFile
+  #14 = Utf8               Overflowing.java
+  #15 = NameAndType        #5:#6          // "<init>":()V
+  #16 = NameAndType        #9:#10         // run:(I)V
+  #17 = Utf8               Overflowing
+  #18 = Utf8               java/lang/Object
+{
+  public Overflowing();
+    descriptor: ()V
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 1: 0
+
+  public static void run(int);
+    descriptor: (I)V
+    flags: (0x0009) ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=1, args_size=1
+         0: iload_0
+         1: iconst_1
+         2: iadd
+         3: invokestatic  #2                  // Method run:(I)V
+         6: return
+      LineNumberTable:
+        line 3: 0
+        line 4: 6
+
+  public static void main(java.lang.String...);
+    descriptor: ([Ljava/lang/String;)V
+    flags: (0x0089) ACC_PUBLIC, ACC_STATIC, ACC_VARARGS
+    Code:
+      stack=1, locals=1, args_size=1
+         0: iconst_0
+         1: invokestatic  #2                  // Method run:(I)V
+         4: return
+      LineNumberTable:
+        line 7: 0
+        line 8: 4
+}
+SourceFile: "Overflowing.java"

@@ -1,2 +1,6 @@
 javac *.java
 javap -p -c -v Overflowing.class > Overflowing.javap
+
+kotlinc *.kt
+javap -p -c -v OverflowingKt.class > OverflowingKt.javap
+javap -p -c -v TailCallKt.class > TailCallKt.javap

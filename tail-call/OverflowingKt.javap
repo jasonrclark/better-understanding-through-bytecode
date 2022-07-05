@@ -1,0 +1,104 @@
+Classfile /Users/jclark/source/better-understanding-through-bytecode/tail-call/OverflowingKt.class
+  Last modified Jul 5, 2022; size 842 bytes
+  MD5 checksum 94ac5232d1329fbcebe6b80faa3451c0
+  Compiled from "Overflowing.kt"
+public final class OverflowingKt
+  minor version: 0
+  major version: 52
+  flags: (0x0031) ACC_PUBLIC, ACC_FINAL, ACC_SUPER
+  this_class: #2                          // OverflowingKt
+  super_class: #4                         // java/lang/Object
+  interfaces: 0, fields: 0, methods: 2, attributes: 2
+Constant pool:
+   #1 = Utf8               OverflowingKt
+   #2 = Class              #1             // OverflowingKt
+   #3 = Utf8               java/lang/Object
+   #4 = Class              #3             // java/lang/Object
+   #5 = Utf8               main
+   #6 = Utf8               ([Ljava/lang/String;)V
+   #7 = Utf8               Lorg/jetbrains/annotations/NotNull;
+   #8 = Utf8               args
+   #9 = String             #8             // args
+  #10 = Utf8               kotlin/jvm/internal/Intrinsics
+  #11 = Class              #10            // kotlin/jvm/internal/Intrinsics
+  #12 = Utf8               checkNotNullParameter
+  #13 = Utf8               (Ljava/lang/Object;Ljava/lang/String;)V
+  #14 = NameAndType        #12:#13        // checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+  #15 = Methodref          #11.#14        // kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+  #16 = Utf8               overflow
+  #17 = Utf8               (I)V
+  #18 = NameAndType        #16:#17        // overflow:(I)V
+  #19 = Methodref          #2.#18         // OverflowingKt.overflow:(I)V
+  #20 = Utf8               [Ljava/lang/String;
+  #21 = Utf8               i
+  #22 = Utf8               I
+  #23 = Utf8               Lkotlin/Metadata;
+  #24 = Utf8               mv
+  #25 = Integer            1
+  #26 = Integer            6
+  #27 = Integer            0
+  #28 = Utf8               k
+  #29 = Integer            2
+  #30 = Utf8               xi
+  #31 = Integer            48
+  #32 = Utf8               d1
+  #33 = Utf8               \u0000\u0018\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u0011\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0010\b\u001a\u0019\u0010\u0000\u001a\u00020\u00012\f\u0010\u0002\u001a\b\u0012\u0004\u0012\u00020\u00040\u0003¢\u0006\u0002\u0010\u0005\u001a\u000e\u0010\u0006\u001a\u00020\u00012\u0006\u0010\u0007\u001a\u00020\b
+  #34 = Utf8               d2
+  #35 = Utf8
+  #36 = Utf8               Overflowing.kt
+  #37 = Utf8               Code
+  #38 = Utf8               LineNumberTable
+  #39 = Utf8               LocalVariableTable
+  #40 = Utf8               RuntimeInvisibleParameterAnnotations
+  #41 = Utf8               SourceFile
+  #42 = Utf8               RuntimeVisibleAnnotations
+{
+  public static final void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+    Code:
+      stack=2, locals=1, args_size=1
+         0: aload_0
+         1: ldc           #9                  // String args
+         3: invokestatic  #15                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+         6: iconst_0
+         7: invokestatic  #19                 // Method overflow:(I)V
+        10: return
+      LineNumberTable:
+        line 3: 6
+        line 4: 10
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      11     0  args   [Ljava/lang/String;
+    RuntimeInvisibleParameterAnnotations:
+      parameter 0:
+        0: #7()
+          org.jetbrains.annotations.NotNull
+
+  public static final void overflow(int);
+    descriptor: (I)V
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+    Code:
+      stack=2, locals=1, args_size=1
+         0: iload_0
+         1: iconst_1
+         2: iadd
+         3: invokestatic  #19                 // Method overflow:(I)V
+         6: return
+      LineNumberTable:
+        line 7: 0
+        line 8: 6
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       7     0     i   I
+}
+SourceFile: "Overflowing.kt"
+RuntimeVisibleAnnotations:
+  0: #23(#24=[I#25,I#26,I#27],#28=I#29,#30=I#31,#32=[s#33],#34=[s#5,s#35,s#8,s#35,s#35,s#6,s#16,s#21,s#35])
+    kotlin.Metadata(
+      mv=[1,6,0]
+      k=2
+      xi=48
+      d1=["\u0000\u0018\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u0011\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0010\b\u001a\u0019\u0010\u0000\u001a\u00020\u00012\f\u0010\u0002\u001a\b\u0012\u0004\u0012\u00020\u00040\u0003¢\u0006\u0002\u0010\u0005\u001a\u000e\u0010\u0006\u001a\u00020\u00012\u0006\u0010\u0007\u001a\u00020\b"]
+      d2=["main","","args","","","([Ljava/lang/String;)V","overflow","i",""]
+    )

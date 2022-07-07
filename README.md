@@ -12,6 +12,7 @@
     * load
     * store
     * Constant pool
+    * new/dup/<init>
     * get/putfield
     * if/goto (look ma, no loops!)
     * invoke methods

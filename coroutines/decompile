@@ -1,0 +1,5 @@
+rm -rf *.class
+kotlinc -cp kotlinx-*.jar *.kt
+
+javap -p -c -v CoroutinesKt.class > CoroutinesKt.javap
+javap -p -c -v "CoroutinesKt\$main\$1.class" > "CoroutinesKt\$main\$1.javap"

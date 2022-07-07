@@ -1,0 +1,232 @@
+Classfile /Users/jclark/source/better-understanding-through-bytecode/coroutines/CoroutinesKt.class
+  Last modified Jul 7, 2022; size 2063 bytes
+  MD5 checksum 9c0e0eeb2e111c44f0704815b3b4fcc3
+  Compiled from "Coroutines.kt"
+public final class CoroutinesKt
+  minor version: 0
+  major version: 52
+  flags: (0x0031) ACC_PUBLIC, ACC_FINAL, ACC_SUPER
+  this_class: #2                          // CoroutinesKt
+  super_class: #4                         // java/lang/Object
+  interfaces: 0, fields: 0, methods: 5, attributes: 3
+Constant pool:
+   #1 = Utf8               CoroutinesKt
+   #2 = Class              #1             // CoroutinesKt
+   #3 = Utf8               java/lang/Object
+   #4 = Class              #3             // java/lang/Object
+   #5 = Utf8               main
+   #6 = Utf8               ()V
+   #7 = Utf8               kotlinx/coroutines/GlobalScope
+   #8 = Class              #7             // kotlinx/coroutines/GlobalScope
+   #9 = Utf8               INSTANCE
+  #10 = Utf8               Lkotlinx/coroutines/GlobalScope;
+  #11 = NameAndType        #9:#10         // INSTANCE:Lkotlinx/coroutines/GlobalScope;
+  #12 = Fieldref           #8.#11         // kotlinx/coroutines/GlobalScope.INSTANCE:Lkotlinx/coroutines/GlobalScope;
+  #13 = Utf8               kotlinx/coroutines/CoroutineScope
+  #14 = Class              #13            // kotlinx/coroutines/CoroutineScope
+  #15 = Utf8               CoroutinesKt$main$1
+  #16 = Class              #15            // CoroutinesKt$main$1
+  #17 = Utf8               <init>
+  #18 = Utf8               (Lkotlin/coroutines/Continuation;)V
+  #19 = NameAndType        #17:#18        // "<init>":(Lkotlin/coroutines/Continuation;)V
+  #20 = Methodref          #16.#19        // CoroutinesKt$main$1."<init>":(Lkotlin/coroutines/Continuation;)V
+  #21 = Utf8               kotlin/jvm/functions/Function2
+  #22 = Class              #21            // kotlin/jvm/functions/Function2
+  #23 = Utf8               kotlinx/coroutines/BuildersKt
+  #24 = Class              #23            // kotlinx/coroutines/BuildersKt
+  #25 = Utf8               launch$default
+  #26 = Utf8               (Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;ILjava/lang/Object;)Lkotlinx/coroutines/Job;
+  #27 = NameAndType        #25:#26        // launch$default:(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;ILjava/lang/Object;)Lkotlinx/coroutines/Job;
+  #28 = Methodref          #24.#27        // kotlinx/coroutines/BuildersKt.launch$default:(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;ILjava/lang/Object;)Lkotlinx/coroutines/Job;
+  #29 = Long               1000l
+  #31 = Utf8               java/lang/Thread
+  #32 = Class              #31            // java/lang/Thread
+  #33 = Utf8               sleep
+  #34 = Utf8               (J)V
+  #35 = NameAndType        #33:#34        // sleep:(J)V
+  #36 = Methodref          #32.#35        // java/lang/Thread.sleep:(J)V
+  #37 = Utf8               first
+  #38 = Utf8               (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+  #39 = Utf8               (Lkotlin/coroutines/Continuation<-Lkotlin/Unit;>;)Ljava/lang/Object;
+  #40 = Utf8               Lorg/jetbrains/annotations/Nullable;
+  #41 = Utf8               Lorg/jetbrains/annotations/NotNull;
+  #42 = String             #37            // first
+  #43 = Utf8               java/lang/System
+  #44 = Class              #43            // java/lang/System
+  #45 = Utf8               out
+  #46 = Utf8               Ljava/io/PrintStream;
+  #47 = NameAndType        #45:#46        // out:Ljava/io/PrintStream;
+  #48 = Fieldref           #44.#47        // java/lang/System.out:Ljava/io/PrintStream;
+  #49 = Utf8               java/io/PrintStream
+  #50 = Class              #49            // java/io/PrintStream
+  #51 = Utf8               println
+  #52 = Utf8               (Ljava/lang/Object;)V
+  #53 = NameAndType        #51:#52        // println:(Ljava/lang/Object;)V
+  #54 = Methodref          #50.#53        // java/io/PrintStream.println:(Ljava/lang/Object;)V
+  #55 = Utf8               kotlin/Unit
+  #56 = Class              #55            // kotlin/Unit
+  #57 = Utf8               Lkotlin/Unit;
+  #58 = NameAndType        #9:#57         // INSTANCE:Lkotlin/Unit;
+  #59 = Fieldref           #56.#58        // kotlin/Unit.INSTANCE:Lkotlin/Unit;
+  #60 = Utf8               $completion
+  #61 = Utf8               Lkotlin/coroutines/Continuation;
+  #62 = Utf8               second
+  #63 = String             #62            // second
+  #64 = Utf8               third
+  #65 = String             #64            // third
+  #66 = Utf8               ([Ljava/lang/String;)V
+  #67 = NameAndType        #5:#6          // main:()V
+  #68 = Methodref          #2.#67         // CoroutinesKt.main:()V
+  #69 = Utf8               args
+  #70 = Utf8               [Ljava/lang/String;
+  #71 = Utf8               Lkotlin/Metadata;
+  #72 = Utf8               mv
+  #73 = Integer            1
+  #74 = Integer            6
+  #75 = Integer            0
+  #76 = Utf8               k
+  #77 = Integer            2
+  #78 = Utf8               xi
+  #79 = Integer            48
+  #80 = Utf8               d1
+  #81 = Utf8               \u0000\n\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0004\u001a\u0011\u0010\u0000\u001a\u00020\u0001H\u0086@ø\u0001\u0000¢\u0006\u0002\u0010\u0002\u001a\u0006\u0010\u0003\u001a\u00020\u0001\u001a\u0011\u0010\u0004\u001a\u00020\u0001H\u0086@ø\u0001\u0000¢\u0006\u0002\u0010\u0002\u001a\u0011\u0010\u0005\u001a\u00020\u0001H\u0086@ø\u0001\u0000¢\u0006\u0002\u0010\u0002\u0082\u0002\u0004\n\u0002\b\u0019
+  #82 = Utf8               d2
+  #83 = Utf8
+  #84 = Utf8               Coroutines.kt
+  #85 = Utf8               Code
+  #86 = Utf8               LineNumberTable
+  #87 = Utf8               LocalVariableTable
+  #88 = Utf8               Signature
+  #89 = Utf8               RuntimeInvisibleAnnotations
+  #90 = Utf8               RuntimeInvisibleParameterAnnotations
+  #91 = Utf8               InnerClasses
+  #92 = Utf8               SourceFile
+  #93 = Utf8               RuntimeVisibleAnnotations
+{
+  public static final void main();
+    descriptor: ()V
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+    Code:
+      stack=6, locals=0, args_size=0
+         0: getstatic     #12                 // Field kotlinx/coroutines/GlobalScope.INSTANCE:Lkotlinx/coroutines/GlobalScope;
+         3: checkcast     #14                 // class kotlinx/coroutines/CoroutineScope
+         6: aconst_null
+         7: aconst_null
+         8: new           #16                 // class CoroutinesKt$main$1
+        11: dup
+        12: aconst_null
+        13: invokespecial #20                 // Method CoroutinesKt$main$1."<init>":(Lkotlin/coroutines/Continuation;)V
+        16: checkcast     #22                 // class kotlin/jvm/functions/Function2
+        19: iconst_3
+        20: aconst_null
+        21: invokestatic  #28                 // Method kotlinx/coroutines/BuildersKt.launch$default:(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/CoroutineContext;Lkotlinx/coroutines/CoroutineStart;Lkotlin/jvm/functions/Function2;ILjava/lang/Object;)Lkotlinx/coroutines/Job;
+        24: pop
+        25: ldc2_w        #29                 // long 1000l
+        28: invokestatic  #36                 // Method java/lang/Thread.sleep:(J)V
+        31: return
+      LineNumberTable:
+        line 5: 0
+        line 12: 25
+        line 13: 31
+
+  public static final java.lang.Object first(kotlin.coroutines.Continuation<? super kotlin.Unit>);
+    descriptor: (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+    Code:
+      stack=2, locals=1, args_size=1
+         0: ldc           #42                 // String first
+         2: getstatic     #48                 // Field java/lang/System.out:Ljava/io/PrintStream;
+         5: swap
+         6: invokevirtual #54                 // Method java/io/PrintStream.println:(Ljava/lang/Object;)V
+         9: getstatic     #59                 // Field kotlin/Unit.INSTANCE:Lkotlin/Unit;
+        12: areturn
+      LineNumberTable:
+        line 16: 0
+        line 17: 9
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      13     0 $completion   Lkotlin/coroutines/Continuation;
+    Signature: #39                          // (Lkotlin/coroutines/Continuation<-Lkotlin/Unit;>;)Ljava/lang/Object;
+    RuntimeInvisibleAnnotations:
+      0: #40()
+        org.jetbrains.annotations.Nullable
+    RuntimeInvisibleParameterAnnotations:
+      parameter 0:
+        0: #41()
+          org.jetbrains.annotations.NotNull
+
+  public static final java.lang.Object second(kotlin.coroutines.Continuation<? super kotlin.Unit>);
+    descriptor: (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+    Code:
+      stack=2, locals=1, args_size=1
+         0: ldc           #63                 // String second
+         2: getstatic     #48                 // Field java/lang/System.out:Ljava/io/PrintStream;
+         5: swap
+         6: invokevirtual #54                 // Method java/io/PrintStream.println:(Ljava/lang/Object;)V
+         9: getstatic     #59                 // Field kotlin/Unit.INSTANCE:Lkotlin/Unit;
+        12: areturn
+      LineNumberTable:
+        line 20: 0
+        line 21: 9
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      13     0 $completion   Lkotlin/coroutines/Continuation;
+    Signature: #39                          // (Lkotlin/coroutines/Continuation<-Lkotlin/Unit;>;)Ljava/lang/Object;
+    RuntimeInvisibleAnnotations:
+      0: #40()
+        org.jetbrains.annotations.Nullable
+    RuntimeInvisibleParameterAnnotations:
+      parameter 0:
+        0: #41()
+          org.jetbrains.annotations.NotNull
+
+  public static final java.lang.Object third(kotlin.coroutines.Continuation<? super kotlin.Unit>);
+    descriptor: (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
+    Code:
+      stack=2, locals=1, args_size=1
+         0: ldc           #65                 // String third
+         2: getstatic     #48                 // Field java/lang/System.out:Ljava/io/PrintStream;
+         5: swap
+         6: invokevirtual #54                 // Method java/io/PrintStream.println:(Ljava/lang/Object;)V
+         9: getstatic     #59                 // Field kotlin/Unit.INSTANCE:Lkotlin/Unit;
+        12: areturn
+      LineNumberTable:
+        line 24: 0
+        line 25: 9
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      13     0 $completion   Lkotlin/coroutines/Continuation;
+    Signature: #39                          // (Lkotlin/coroutines/Continuation<-Lkotlin/Unit;>;)Ljava/lang/Object;
+    RuntimeInvisibleAnnotations:
+      0: #40()
+        org.jetbrains.annotations.Nullable
+    RuntimeInvisibleParameterAnnotations:
+      parameter 0:
+        0: #41()
+          org.jetbrains.annotations.NotNull
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: (0x1009) ACC_PUBLIC, ACC_STATIC, ACC_SYNTHETIC
+    Code:
+      stack=0, locals=1, args_size=1
+         0: invokestatic  #68                 // Method main:()V
+         3: return
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       4     0  args   [Ljava/lang/String;
+}
+InnerClasses:
+  static final #16;                       // class CoroutinesKt$main$1
+SourceFile: "Coroutines.kt"
+RuntimeVisibleAnnotations:
+  0: #71(#72=[I#73,I#74,I#75],#76=I#77,#78=I#79,#80=[s#81],#82=[s#37,s#83,s#38,s#5,s#62,s#64])
+    kotlin.Metadata(
+      mv=[1,6,0]
+      k=2
+      xi=48
+      d1=["\u0000\n\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0004\u001a\u0011\u0010\u0000\u001a\u00020\u0001H\u0086@ø\u0001\u0000¢\u0006\u0002\u0010\u0002\u001a\u0006\u0010\u0003\u001a\u00020\u0001\u001a\u0011\u0010\u0004\u001a\u00020\u0001H\u0086@ø\u0001\u0000¢\u0006\u0002\u0010\u0002\u001a\u0011\u0010\u0005\u001a\u00020\u0001H\u0086@ø\u0001\u0000¢\u0006\u0002\u0010\u0002\u0082\u0002\u0004\n\u0002\b\u0019"]
+      d2=["first","","(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;","main","second","third"]
+    )

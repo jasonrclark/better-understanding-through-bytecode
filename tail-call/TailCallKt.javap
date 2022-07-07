@@ -1,6 +1,6 @@
 Classfile /Users/jclark/source/better-understanding-through-bytecode/tail-call/TailCallKt.class
-  Last modified Jul 5, 2022; size 877 bytes
-  MD5 checksum 46924ef2bd506329e5b5355ed40cebe3
+  Last modified Jul 7, 2022; size 668 bytes
+  MD5 checksum 19cea7e0288d27b5cc3f17cabfa7fadc
   Compiled from "TailCall.kt"
 public final class TailCallKt
   minor version: 0
@@ -8,73 +8,57 @@ public final class TailCallKt
   flags: (0x0031) ACC_PUBLIC, ACC_FINAL, ACC_SUPER
   this_class: #2                          // TailCallKt
   super_class: #4                         // java/lang/Object
-  interfaces: 0, fields: 0, methods: 2, attributes: 2
+  interfaces: 0, fields: 0, methods: 3, attributes: 2
 Constant pool:
    #1 = Utf8               TailCallKt
    #2 = Class              #1             // TailCallKt
    #3 = Utf8               java/lang/Object
    #4 = Class              #3             // java/lang/Object
    #5 = Utf8               main
-   #6 = Utf8               ([Ljava/lang/String;)V
-   #7 = Utf8               Lorg/jetbrains/annotations/NotNull;
-   #8 = Utf8               args
-   #9 = String             #8             // args
-  #10 = Utf8               kotlin/jvm/internal/Intrinsics
-  #11 = Class              #10            // kotlin/jvm/internal/Intrinsics
-  #12 = Utf8               checkNotNullParameter
-  #13 = Utf8               (Ljava/lang/Object;Ljava/lang/String;)V
-  #14 = NameAndType        #12:#13        // checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
-  #15 = Methodref          #11.#14        // kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
-  #16 = Utf8               dontOverflow
-  #17 = Utf8               (I)V
-  #18 = NameAndType        #16:#17        // dontOverflow:(I)V
-  #19 = Methodref          #2.#18         // TailCallKt.dontOverflow:(I)V
-  #20 = Utf8               [Ljava/lang/String;
-  #21 = Utf8               i
-  #22 = Utf8               I
-  #23 = Utf8               Lkotlin/Metadata;
-  #24 = Utf8               mv
-  #25 = Integer            1
-  #26 = Integer            6
-  #27 = Integer            0
-  #28 = Utf8               k
-  #29 = Integer            2
-  #30 = Utf8               xi
-  #31 = Integer            48
-  #32 = Utf8               d1
-  #33 = Utf8               \u0000\u001a\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u0011\n\u0002\u0010\u000e\n\u0000\u001a\u0011\u0010\u0000\u001a\u00020\u00012\u0006\u0010\u0002\u001a\u00020\u0003H\u0086\u0010\u001a\u0019\u0010\u0004\u001a\u00020\u00012\f\u0010\u0005\u001a\b\u0012\u0004\u0012\u00020\u00070\u0006¢\u0006\u0002\u0010\b
-  #34 = Utf8               d2
-  #35 = Utf8
-  #36 = Utf8               TailCall.kt
-  #37 = Utf8               Code
-  #38 = Utf8               LineNumberTable
-  #39 = Utf8               LocalVariableTable
-  #40 = Utf8               RuntimeInvisibleParameterAnnotations
-  #41 = Utf8               StackMapTable
-  #42 = Utf8               SourceFile
-  #43 = Utf8               RuntimeVisibleAnnotations
+   #6 = Utf8               ()V
+   #7 = Utf8               dontOverflow
+   #8 = Utf8               (I)V
+   #9 = NameAndType        #7:#8          // dontOverflow:(I)V
+  #10 = Methodref          #2.#9          // TailCallKt.dontOverflow:(I)V
+  #11 = Utf8               i
+  #12 = Utf8               I
+  #13 = Utf8               ([Ljava/lang/String;)V
+  #14 = NameAndType        #5:#6          // main:()V
+  #15 = Methodref          #2.#14         // TailCallKt.main:()V
+  #16 = Utf8               args
+  #17 = Utf8               [Ljava/lang/String;
+  #18 = Utf8               Lkotlin/Metadata;
+  #19 = Utf8               mv
+  #20 = Integer            1
+  #21 = Integer            6
+  #22 = Integer            0
+  #23 = Utf8               k
+  #24 = Integer            2
+  #25 = Utf8               xi
+  #26 = Integer            48
+  #27 = Utf8               d1
+  #28 = Utf8               \u0000\u000e\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\b\n\u0000\u001a\u0011\u0010\u0000\u001a\u00020\u00012\u0006\u0010\u0002\u001a\u00020\u0003H\u0086\u0010\u001a\u0006\u0010\u0004\u001a\u00020\u0001
+  #29 = Utf8               d2
+  #30 = Utf8
+  #31 = Utf8               TailCall.kt
+  #32 = Utf8               Code
+  #33 = Utf8               LineNumberTable
+  #34 = Utf8               StackMapTable
+  #35 = Utf8               LocalVariableTable
+  #36 = Utf8               SourceFile
+  #37 = Utf8               RuntimeVisibleAnnotations
 {
-  public static final void main(java.lang.String[]);
-    descriptor: ([Ljava/lang/String;)V
+  public static final void main();
+    descriptor: ()V
     flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
     Code:
-      stack=2, locals=1, args_size=1
-         0: aload_0
-         1: ldc           #9                  // String args
-         3: invokestatic  #15                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
-         6: iconst_0
-         7: invokestatic  #19                 // Method dontOverflow:(I)V
-        10: return
+      stack=1, locals=0, args_size=0
+         0: iconst_0
+         1: invokestatic  #10                 // Method dontOverflow:(I)V
+         4: return
       LineNumberTable:
-        line 3: 6
-        line 4: 10
-      LocalVariableTable:
-        Start  Length  Slot  Name   Signature
-            0      11     0  args   [Ljava/lang/String;
-    RuntimeInvisibleParameterAnnotations:
-      parameter 0:
-        0: #7()
-          org.jetbrains.annotations.NotNull
+        line 2: 0
+        line 3: 4
 
   public static final void dontOverflow(int);
     descriptor: (I)V
@@ -93,19 +77,30 @@ Constant pool:
           offset_delta = 2
           locals = [ int ]
       LineNumberTable:
-        line 6: 0
-        line 7: 3
+        line 5: 0
+        line 6: 3
       LocalVariableTable:
         Start  Length  Slot  Name   Signature
             0       9     0     i   I
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: (0x1009) ACC_PUBLIC, ACC_STATIC, ACC_SYNTHETIC
+    Code:
+      stack=0, locals=1, args_size=1
+         0: invokestatic  #15                 // Method main:()V
+         3: return
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       4     0  args   [Ljava/lang/String;
 }
 SourceFile: "TailCall.kt"
 RuntimeVisibleAnnotations:
-  0: #23(#24=[I#25,I#26,I#27],#28=I#29,#30=I#31,#32=[s#33],#34=[s#16,s#35,s#21,s#35,s#5,s#8,s#35,s#35,s#6])
+  0: #18(#19=[I#20,I#21,I#22],#23=I#24,#25=I#26,#27=[s#28],#29=[s#7,s#30,s#11,s#30,s#5])
     kotlin.Metadata(
       mv=[1,6,0]
       k=2
       xi=48
-      d1=["\u0000\u001a\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u0011\n\u0002\u0010\u000e\n\u0000\u001a\u0011\u0010\u0000\u001a\u00020\u00012\u0006\u0010\u0002\u001a\u00020\u0003H\u0086\u0010\u001a\u0019\u0010\u0004\u001a\u00020\u00012\f\u0010\u0005\u001a\b\u0012\u0004\u0012\u00020\u00070\u0006¢\u0006\u0002\u0010\b"]
-      d2=["dontOverflow","","i","","main","args","","","([Ljava/lang/String;)V"]
+      d1=["\u0000\u000e\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\b\n\u0000\u001a\u0011\u0010\u0000\u001a\u00020\u00012\u0006\u0010\u0002\u001a\u00020\u0003H\u0086\u0010\u001a\u0006\u0010\u0004\u001a\u00020\u0001"]
+      d2=["dontOverflow","","i","","main"]
     )

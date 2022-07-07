@@ -1,5 +1,4 @@
-@Suppress("UNUSED_PARAMETER")
-fun main(args: Array<String>) {
+fun main() {
   overflow(0)
 }
 

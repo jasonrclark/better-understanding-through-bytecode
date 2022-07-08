@@ -1,6 +1,6 @@
 Classfile /Users/jclark/source/better-understanding-through-bytecode/tail-call/TailCallKt.class
-  Last modified Jul 7, 2022; size 668 bytes
-  MD5 checksum 19cea7e0288d27b5cc3f17cabfa7fadc
+  Last modified Jul 8, 2022; size 668 bytes
+  MD5 checksum f04997bfca9e57472e6486caefc555a9
   Compiled from "TailCall.kt"
 public final class TailCallKt
   minor version: 0
@@ -17,11 +17,11 @@ Constant pool:
    #5 = Utf8               main
    #6 = Utf8               ()V
    #7 = Utf8               dontOverflow
-   #8 = Utf8               (I)V
-   #9 = NameAndType        #7:#8          // dontOverflow:(I)V
-  #10 = Methodref          #2.#9          // TailCallKt.dontOverflow:(I)V
-  #11 = Utf8               i
-  #12 = Utf8               I
+   #8 = Utf8               (J)V
+   #9 = NameAndType        #7:#8          // dontOverflow:(J)V
+  #10 = Methodref          #2.#9          // TailCallKt.dontOverflow:(J)V
+  #11 = Utf8               n
+  #12 = Utf8               J
   #13 = Utf8               ([Ljava/lang/String;)V
   #14 = NameAndType        #5:#6          // main:()V
   #15 = Methodref          #2.#14         // TailCallKt.main:()V
@@ -37,7 +37,7 @@ Constant pool:
   #25 = Utf8               xi
   #26 = Integer            48
   #27 = Utf8               d1
-  #28 = Utf8               \u0000\u000e\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\b\n\u0000\u001a\u0011\u0010\u0000\u001a\u00020\u00012\u0006\u0010\u0002\u001a\u00020\u0003H\u0086\u0010\u001a\u0006\u0010\u0004\u001a\u00020\u0001
+  #28 = Utf8               \u0000\u000e\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\t\n\u0000\u001a\u0011\u0010\u0000\u001a\u00020\u00012\u0006\u0010\u0002\u001a\u00020\u0003H\u0086\u0010\u001a\u0006\u0010\u0004\u001a\u00020\u0001
   #29 = Utf8               d2
   #30 = Utf8
   #31 = Utf8               TailCall.kt
@@ -52,36 +52,36 @@ Constant pool:
     descriptor: ()V
     flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
     Code:
-      stack=1, locals=0, args_size=0
-         0: iconst_0
-         1: invokestatic  #10                 // Method dontOverflow:(I)V
+      stack=2, locals=0, args_size=0
+         0: lconst_0
+         1: invokestatic  #10                 // Method dontOverflow:(J)V
          4: return
       LineNumberTable:
         line 2: 0
         line 3: 4
 
-  public static final void dontOverflow(int);
-    descriptor: (I)V
+  public static final void dontOverflow(long);
+    descriptor: (J)V
     flags: (0x0019) ACC_PUBLIC, ACC_STATIC, ACC_FINAL
     Code:
-      stack=2, locals=2, args_size=1
-         0: iload_0
-         1: istore_1
-         2: iload_1
-         3: iconst_1
-         4: iadd
-         5: istore_1
+      stack=4, locals=4, args_size=1
+         0: lload_0
+         1: lstore_2
+         2: lload_2
+         3: lconst_1
+         4: ladd
+         5: lstore_2
          6: goto          2
       StackMapTable: number_of_entries = 1
         frame_type = 252 /* append */
           offset_delta = 2
-          locals = [ int ]
+          locals = [ long ]
       LineNumberTable:
         line 5: 0
         line 6: 3
       LocalVariableTable:
         Start  Length  Slot  Name   Signature
-            0       9     0     i   I
+            0       9     0     n   J
 
   public static void main(java.lang.String[]);
     descriptor: ([Ljava/lang/String;)V
@@ -101,6 +101,6 @@ RuntimeVisibleAnnotations:
       mv=[1,6,0]
       k=2
       xi=48
-      d1=["\u0000\u000e\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\b\n\u0000\u001a\u0011\u0010\u0000\u001a\u00020\u00012\u0006\u0010\u0002\u001a\u00020\u0003H\u0086\u0010\u001a\u0006\u0010\u0004\u001a\u00020\u0001"]
-      d2=["dontOverflow","","i","","main"]
+      d1=["\u0000\u000e\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\t\n\u0000\u001a\u0011\u0010\u0000\u001a\u00020\u00012\u0006\u0010\u0002\u001a\u00020\u0003H\u0086\u0010\u001a\u0006\u0010\u0004\u001a\u00020\u0001"]
+      d2=["dontOverflow","","n","","main"]
     )

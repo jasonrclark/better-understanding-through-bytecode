@@ -2,6 +2,6 @@ fun main() {
   dontOverflow(0)
 }
 
-tailrec fun dontOverflow(i: Int) {
-  dontOverflow(i + 1)
+tailrec fun dontOverflow(n: Long) {
+  dontOverflow(n + 1)
 }

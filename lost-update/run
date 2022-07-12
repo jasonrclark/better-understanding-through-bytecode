@@ -1,2 +1,2 @@
-javac *.java
+./decompile
 java Main
